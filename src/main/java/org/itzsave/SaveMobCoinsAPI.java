@@ -1,17 +1,16 @@
 package org.itzsave;
 
-import org.bukkit.plugin.java.JavaPlugin;
+import java.util.Optional;
+import java.util.UUID;
 
-public final class SaveMobCoinsAPI extends JavaPlugin {
+public interface SaveMobCoinsAPI {
 
-    @Override
-    public void onEnable() {
-        // Plugin startup logic
+    Optional<Long> getUserBalance(final UUID uuid);
 
-    }
+    void setUserBalance(final UUID uuid, int coins);
 
-    @Override
-    public void onDisable() {
-        // Plugin shutdown logic
+    void reload();
+
+    default void MobCoinGainEvent() {
     }
 }
