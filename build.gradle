@@ -3,7 +3,6 @@ plugins {
 }
 
 group = 'org.itzsave'
-version = ''
 
 repositories {
     mavenCentral()
